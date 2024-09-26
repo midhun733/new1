@@ -1,0 +1,106 @@
+/* .contact_container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    
+    margin: 15rem auto;
+    border-radius: 1rem;
+} */
+
+/* ============ aside ============*/
+/* Styles for the contact container */
+.contact {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:var(--color-bg1);
+    padding: 20px;
+}
+
+.container.contact_container {
+    max-width: 600px;
+    width: 100%;
+    background-color:var(--color-bg2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact_container h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact_container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color:var(--color-white);
+}
+
+.contact_container input[type="text"],
+.contact_container input[type="email"],
+.contact_container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact_container textarea {
+    resize: vertical;
+}
+
+.contact_container button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-danger);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact_container button:hover {
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .container.contact_container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container.contact_container {
+        padding: 10px;
+    }
+
+    .contact_container h2 {
+        font-size: 18px;
+    }
+
+    .contact_container input[type="text"],
+    .contact_container input[type="email"],
+    .contact_container textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact_container button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

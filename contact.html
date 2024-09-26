@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="contact.css">
+ 
+        
+       
+</head>
+<body> 
+    <nav>
+        <div class="container nav_container">
+             <a href="index.html"><h4>Education</h4></a>
+             <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+             </ul>
+             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+     <!-- ======== end of navbar =========== --> 
+
+<div class="contact">
+    <div class="container contact_container">
+        
+                <h2>Contact Us</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return validateForm()">
+                    <input type="hidden" name="access_key" value="15d01ce4-a27f-47c3-a5d3-448524a749e1">
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <h4 id="emailError" class="error" style="color: red; font-size: 1rem;"></h4>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+         
+       
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4>Education</h4></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sapiente.</p>
+            </div>
+    
+            <div class="footer_2">
+                <h4>Links</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+    
+            <div class="footer_3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">terms and conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                   
+                </ul>
+            </div>
+    
+            <div class="footer_4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>344 434 344 43</p>
+                    <p>wrerrtfeh@gmail.com</p>
+                </div>
+    
+                <ul class="footer_socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+      
+    
+        </div>
+    
+        <div class="footer_copyright">
+            <small>copyright &copy; reserved</small>
+        </div>
+    </footer>
+        <script>
+              function validateForm(){
+                var email=document.getElementById('email').value;
+                document.getElementById('emailError').innerHTML='';
+
+                
+            if (email==="") {
+                document.getElementById('emailError').innerHTML='email is required';
+                return false;
+            }else if(!isvalidEmail(email)){
+                document.getElementById('emailError').innerHTML='invalid email format';
+                return false;
+
+            }
+         }
+
+         function isvalidEmail(email){
+            //simple email validation
+
+            var emailRegex =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+         }
+        </script>
+    
+    
+       <script src="main.js"></script>
+        
+ 
+
+    
+
+      
+
+
+    </body>
+    </html>
